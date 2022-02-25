@@ -6,6 +6,13 @@ PATCH_DIR="${ROOT}/patches"
 IN_DIR="${ROOT}/rc-pybind11"
 OUT_DIR="${ROOT}/pybind11"
 
+# Args
+if [[ "$#" -ne 1 ]]; then
+	echo "Usage: ./build.sh <bdist_wheel|sdist|setup.py arg>"
+	exit 1
+fi
+TYPE="$1"
+
 
 # Update
 echo "Updating submodules"
@@ -27,4 +34,4 @@ git apply "${PATCH_DIR}/"*
 
 # Build
 echo "Building wheel"
-python3 setup.py bdist_wheel
+python3 setup.py "${TYPE}"
