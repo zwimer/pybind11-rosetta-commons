@@ -1,0 +1,13 @@
+diff --git a/tools/setup_main.py.in b/tools/setup_main.py.in
+index 2231a08..22c7d77 100644
+--- a/tools/setup_main.py.in
++++ b/tools/setup_main.py.in
+@@ -9,7 +9,7 @@ cmdclass = {}
+ $extra_cmd
+ 
+ setup(
+-    name="pybind11",
++    name="pybind11-rosetta-commons",
+     version="$version",
+     download_url='https://github.com/pybind/pybind11/tarball/v$version',
+     packages=[
